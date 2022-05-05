@@ -1,0 +1,190 @@
+body{
+  font-family: $font-family-base;
+  color: $text-color;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.img-fluid{
+  width: 100%;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+
+  .logo img{
+    width: 200px;
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    a{
+      display: block;
+      text-decoration: none;
+      color: $text-color;
+      padding: 8px 30px;
+      font-weight: 900;
+
+      &:hover{
+        opacity: .7;
+      }
+
+      &:last-child{
+        padding-right: 0px;
+      }
+    }
+  }
+}
+
+
+.banner{
+  margin-bottom: 60px;
+}
+
+.content{
+  display: flex;
+  text-align: center;
+	
+
+  .sidelist{
+    width: 300px;
+
+    h3{
+      background: #3F5D45;
+      color: white;
+      padding: 16px 102px;
+    }
+
+    ul{
+      li{
+        border: 1px solid $sub-color;
+
+        &:not(li:nth-of-type(4)) {
+          border-bottom: none;
+        }
+
+        &:hover{
+          background-color: $sub-color;
+        }
+
+        &.active{
+          background-color: $sub-color;
+        }
+
+        a{
+          text-decoration: none;
+          color: $text-color;
+          padding: 16px 0px;
+          display: block;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+	.proList{
+		display: flex;
+		flex-wrap: wrap;
+    width: 640px;
+
+		.proCard{
+			position: relative;
+			 margin-left: 20px;
+			margin-bottom: 20px;
+			.ad-featured{
+				position: absolute;
+				left: 20px;
+				width: 30px;
+				line-height: 20px;
+				background-color: $text-color;
+				color: white;
+				font-size: 16px;
+				padding: 6px 2px;
+			}
+			.likeIcon{
+				position: absolute;
+				right: 20px;
+				top: 15px;
+			}
+			.proFooter{
+				display: flex;
+				border: 1px solid $sub-color;
+				border-top: none;
+				span{
+					width: 50%;
+					padding: 14px 0px;
+					font-size: 20px;
+					&:first-child{
+						font-weight: 300;
+						border-right: 1px solid $sub-color;
+					}
+					&:last-child{
+						font-weight: bold;
+					}
+				}
+			}
+
+			.cartBtn{
+				background: $sub-color;
+				color: $text-color;
+				font-size: 24px;
+				font-weight: bold;
+				padding: 16px 0px;
+				width: 100%;
+				border: none;
+				cursor: pointer;
+			}
+		}
+
+	}
+
+}
+
+.paginations{
+	margin-bottom: 60px;
+  ul{
+    display: flex;
+    justify-content: flex-end;
+
+    li{
+      font-size: 0;
+      border: 1px solid $sub-color;
+      height: 60px;
+      overflow: hidden;
+
+      &:hover{
+        background-color: $sub-color;
+      }
+
+      &.active {
+        background-color: $text-color;
+
+        & a {
+          color: white;
+        }
+      }
+
+      &.arrow a {
+        padding: 18px;
+      }
+
+      &:not(li:nth-of-type(5)) {
+        border-right: none;
+      }
+
+      a{
+        text-decoration: none;
+        display: block;
+        color: $text-color;
+        padding: 16px 24px;
+        line-height: 1.5;
+        font-size: 20px;
+
+      }
+    }
+	}
+}
